@@ -1,3 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
 
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+header .navbar {
+  position: fixed;
+  width: 100%;
+  font-family: "Ubuntu", cursive;
+  padding: 30px 0;
+  transition: all 0.3s ease;
+}
+header .navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .navbar .max-width .logo a {
+  color: #fff;
+  font-size: 2.188em;
+  font-weight: 600;
+}
+header .navbar .max-width .logo a span {
+  color: #DF2E1C;
+}
+header .navbar .max-width .menu li {
+  list-style: none;
+  display: inline-block;
+}
+header .navbar .max-width .menu li a {
+  font-size: 1.125em;
+  font-weight: 500;
+  margin-left: 25px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+header .navbar .max-width .menu li a:hover {
+  color: #F73620;
+}
+header .navbar.sticky {
+  padding: 15px 0;
+  background: #DF2E1C;
+}
+
+main .home {
+  display: flex;
+  background: url("../assets/Banner/Banner_Mask.gif") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+  min-height: 500px;
+  font-family: "Ubuntu", cursive;
+}
+main .home .max-width {
+  margin: auto 0 auto 40px;
+}
+main .home .max-width .home-content .text_1 {
+  font-size: 1.688em;
+}
+main .home .max-width .home-content .text_2 {
+  font-size: 4.688em;
+  font-weight: 600;
+  margin-left: -3px;
+}
+main .home .max-width .home-content .text_3 {
+  font-size: 2.5em;
+  margin: 5px 0;
+}
+main .home .max-width .home-content .text_3 span {
+  color: #DF2E1C;
+  font-weight: 500;
+}
 
 /*# sourceMappingURL=style.css.map */

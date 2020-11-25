@@ -1,0 +1,40 @@
+// ----- MAIN STYLING -----
+main {
+
+    // HOME SECTION STYLING
+    .home {
+        display: flex;
+        background: url("../assets/Banner/Banner_Mask.gif") no-repeat center;
+        background-size: cover;
+        height: 100vh;
+        color: #fff;
+        min-height: 500px;
+        font-family: $Ubuntu;
+
+        .max-width {
+            margin: auto 0 auto 40px;
+
+            .home-content {
+                .text_1 {
+                    font-size: 1.688em;
+                }
+
+                .text_2 {
+                    font-size: 4.688em;
+                    font-weight: 600;
+                    margin-left: -3px;
+                }
+
+                .text_3 {
+                    font-size: 2.5em;
+                    margin: 5px 0;
+
+                    span {
+                        color: $Color-Primary;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}

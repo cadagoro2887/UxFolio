@@ -1,0 +1,28 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+// GLOBAL STYLES
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+// VARIABLE FONTS
+$Poppins: "Poppins",
+san cursive;
+
+$Ubuntu: "Ubuntu",
+cursive;
+
+// VARIABLE COLOR
+$Color-Primary:#DF2E1C;
+
+$Color-Menu: #F73620;
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
