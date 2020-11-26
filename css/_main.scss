@@ -55,52 +55,15 @@ main {
         }
     }
 
-    // HOME END
 
     // ABOUT SECTION STYLING
     .about {
-        font-family: $Poppins;
 
-        .title {
-            position: relative;
-            font-family: $Ubuntu;
-            text-align: center;
-            font-size: 2.5em;
-            font-weight: 500;
-            margin-bottom: 60px;
-            padding-bottom: 20px;
-
-            &::before {
-                content: "";
-                position: absolute;
-                width: 240px;
-                height: 3px;
-                bottom: 0px;
-                left: 50%;
-                background: $Color-Menu;
-                transform: translateX(-50%);
-            }
-
-            &::after {
-                content: "Who I am";
-                position: absolute;
-                bottom: -12px;
-                left: 50%;
-                padding: 5px;
-                font-size: 20px;
-                font-weight: bold;
-                color: $Color-Primary;
-                background: #fff;
-                transform: translateX(-50%);
-            }
+        .title::after {
+            content: "Who I am";
         }
 
         .about-content {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: space-between;
-
             .left {
                 width: 45%;
 
@@ -146,6 +109,60 @@ main {
                         background: none;
                     }
                 }
+            }
+        }
+    }
+
+    // SERVICES SECTION START
+    .services {
+        background: #111;
+        color: #fff;
+
+        .title::after {
+            background: #111;
+            color: #fff;
+            content: "What I Provide";
+        }
+
+        .serv-content {
+            .card {
+                width: calc(33% - 20px);
+                background: #222;
+                text-align: center;
+                border-radius: 6px;
+                padding: 20px 25px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background: $Color-Menu;
+                }
+
+                &:hover i {
+                    color: #fff !important;
+                    transition: color 0.3s ease;
+
+                }
+
+                &:hover .box {
+                    transform: scale(1.05);
+                }
+
+                .box {
+                    transition: all 0.3s ease;
+
+                    i {
+                        font-size: 3.125em;
+                        color: $Color-Menu;
+                    }
+
+                    .text {
+                        font-size: 1.563em;
+                        font-weight: 500;
+                        margin: 10px 0 7px 0;
+                    }
+                }
+
             }
         }
     }

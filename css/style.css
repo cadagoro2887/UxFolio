@@ -17,6 +17,52 @@ section {
   padding: 100px 0;
 }
 
+.about,
+.services {
+  font-family: "Poppins", san cursive;
+}
+.about .title,
+.services .title {
+  position: relative;
+  font-family: "Ubuntu", cursive;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+}
+.about .title::before,
+.services .title::before {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 3px;
+  bottom: 0px;
+  left: 50%;
+  background: #F73620;
+  transform: translateX(-50%);
+}
+.about .title::after,
+.services .title::after {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #DF2E1C;
+  background: #fff;
+  transform: translateX(-50%);
+}
+
+.about .about-content,
+.services .serv-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 header .navbar {
   position: fixed;
   width: 100%;
@@ -121,45 +167,8 @@ main .home .max-width .home-content a:hover {
   color: #F73620;
   background: none;
 }
-main .about {
-  font-family: "Poppins", san cursive;
-}
-main .about .title {
-  position: relative;
-  font-family: "Ubuntu", cursive;
-  text-align: center;
-  font-size: 2.5em;
-  font-weight: 500;
-  margin-bottom: 60px;
-  padding-bottom: 20px;
-}
-main .about .title::before {
-  content: "";
-  position: absolute;
-  width: 240px;
-  height: 3px;
-  bottom: 0px;
-  left: 50%;
-  background: #F73620;
-  transform: translateX(-50%);
-}
 main .about .title::after {
   content: "Who I am";
-  position: absolute;
-  bottom: -12px;
-  left: 50%;
-  padding: 5px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #DF2E1C;
-  background: #fff;
-  transform: translateX(-50%);
-}
-main .about .about-content {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 main .about .about-content .left {
   width: 45%;
@@ -199,6 +208,46 @@ main .about .about-content .right a {
 main .about .about-content .right a:hover {
   color: #F73620;
   background: none;
+}
+main .services {
+  background: #111;
+  color: #fff;
+}
+main .services .title::after {
+  background: #111;
+  color: #fff;
+  content: "What I Provide";
+}
+main .services .serv-content .card {
+  width: calc(33% - 20px);
+  background: #222;
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+main .services .serv-content .card:hover {
+  background: #F73620;
+}
+main .services .serv-content .card:hover i {
+  color: #fff !important;
+  transition: color 0.3s ease;
+}
+main .services .serv-content .card:hover .box {
+  transform: scale(1.05);
+}
+main .services .serv-content .card .box {
+  transition: all 0.3s ease;
+}
+main .services .serv-content .card .box i {
+  font-size: 3.125em;
+  color: #F73620;
+}
+main .services .serv-content .card .box .text {
+  font-size: 1.563em;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
 }
 
 @media (max-width: 1104px) {
@@ -284,6 +333,11 @@ main .about .about-content .right a:hover {
   }
   .about .about-content .right {
     flex: 100%;
+  }
+
+  .services .serv-content .card {
+    width: 100% !important;
+    margin-bottom: 25px;
   }
 }
 @media (max-width: 690px) {

@@ -75,7 +75,6 @@
         }
     }
 
-
     .navbar .menu.active {
         left: 0;
     }
@@ -102,6 +101,7 @@
         max-width: 800px;
     }
 
+    // ABOUT
     .about .about-content {
         .column {
             width: 100% !important;
@@ -115,6 +115,15 @@
 
         .right {
             flex: 100%;
+        }
+    }
+
+    .services {
+        .serv-content {
+            .card {
+                width: 100% !important;
+                margin-bottom: 25px;
+            }
         }
     }
 }

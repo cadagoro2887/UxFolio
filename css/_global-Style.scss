@@ -23,6 +23,8 @@ $Color-Menu: #F73620;
 
 $Color-Hover: #000D1C;
 
+
+// ALL SIMILAR CONTENT STYLING CODE
 .max-width {
     max-width: 1300px;
     padding: 0 80px;
@@ -31,4 +33,50 @@ $Color-Hover: #000D1C;
 
 section {
     padding: 100px 0;
+}
+
+.about,
+.services {
+    font-family: $Poppins;
+
+    .title {
+        position: relative;
+        font-family: $Ubuntu;
+        text-align: center;
+        font-size: 2.5em;
+        font-weight: 500;
+        margin-bottom: 60px;
+        padding-bottom: 20px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 240px;
+            height: 3px;
+            bottom: 0px;
+            left: 50%;
+            background: $Color-Menu;
+            transform: translateX(-50%);
+        }
+
+        &::after {
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            padding: 5px;
+            font-size: 20px;
+            font-weight: bold;
+            color: $Color-Primary;
+            background: #fff;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.about .about-content,
+.services .serv-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
