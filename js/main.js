@@ -9,5 +9,9 @@ $(document).ready(function () {
 
     });
 
-
+    // TOGGLE MENU / NAVBAR SCRIPT
+    $('.menu-btn').click(function () {
+        $('.navbar .menu').toggleClass("active");
+        $('.menu-btn i').toggleClass("active");
+    });
 });

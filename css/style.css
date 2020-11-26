@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
 * {
   margin: 0;
@@ -45,10 +46,31 @@ header .navbar .max-width .menu li a {
 }
 header .navbar .max-width .menu li a:hover {
   color: #F73620;
+  transition: all 0.3s ease;
 }
 header .navbar.sticky {
   padding: 15px 0;
   background: #DF2E1C;
+}
+header .navbar.sticky .logo a span {
+  color: #fff;
+  transition: all 0.3s ease;
+}
+header .navbar.sticky .menu li a:hover {
+  color: #000D1C;
+  transition: all 0.3s ease;
+}
+header .navbar.sticky .menu-btn:hover {
+  color: #000D1C;
+}
+header .menu-btn {
+  color: #fff;
+  font-size: 1.438em;
+  cursor: pointer;
+  display: none;
+}
+header .menu-btn:hover {
+  color: #F73620;
 }
 
 main .home {
@@ -78,6 +100,109 @@ main .home .max-width .home-content .text_3 {
 main .home .max-width .home-content .text_3 span {
   color: #DF2E1C;
   font-weight: 500;
+}
+main .home .max-width .home-content a {
+  display: inline-block;
+  background: #F73620;
+  color: #fff;
+  font-size: 1.563em;
+  padding: 12px 36px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid #F73620;
+  transition: all 0.3s ease;
+}
+main .home .max-width .home-content a:hover {
+  color: #F73620;
+  background: none;
+}
+
+@media (max-width: 1104px) {
+  .home .max-width {
+    margin-left: 0px !important;
+  }
+}
+@media (max-width: 991px) {
+  .max-width {
+    padding: 0 50px !important;
+  }
+}
+@media (max-width: 947px) {
+  .max-width {
+    padding: 0 50px !important;
+  }
+
+  .navbar .menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: #111;
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+  }
+  .navbar .menu li {
+    display: block !important;
+  }
+  .navbar .menu li a {
+    display: inline-block !important;
+    margin: 20px 0;
+    font-size: 1.563em !important;
+  }
+  .navbar .menu li a:hover {
+    color: #F73620;
+  }
+  .navbar .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+  .navbar .menu-btn i.active::before {
+    content: "";
+  }
+
+  .navbar .menu.active {
+    left: 0;
+  }
+
+  .home .home-content .text_2 {
+    font-size: 4.375em !important;
+  }
+  .home .home-content .text_3 {
+    font-size: 2.188em !important;
+  }
+  .home .home-content a {
+    font-size: 1.438em !important;
+    padding: 10px 30px;
+  }
+}
+@media (max-width: 690px) {
+  .max-width {
+    padding: 0 23px !important;
+  }
+
+  .home .home-content .text_2 {
+    font-size: 3.75em !important;
+  }
+  .home .home-content .text_3 {
+    font-size: 2em !important;
+  }
+  .home .home-content a {
+    font-size: 1.25em !important;
+  }
+}
+@media (max-width: 500px) {
+  .max-width {
+    padding: 0 23px !important;
+  }
+
+  .home .home-content .text_2 {
+    font-size: 3.125em !important;
+  }
+  .home .home-content .text_3 {
+    font-size: 1.688em !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -34,6 +34,23 @@ main {
                         font-weight: 500;
                     }
                 }
+
+                a {
+                    display: inline-block;
+                    background: $Color-Menu;
+                    color: #fff;
+                    font-size: 1.563em;
+                    padding: 12px 36px;
+                    margin-top: 20px;
+                    border-radius: 6px;
+                    border: 2px solid $Color-Menu;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        color: $Color-Menu;
+                        background: none;
+                    }
+                }
             }
         }
     }

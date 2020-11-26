@@ -6,7 +6,6 @@ header {
         width: 100%;
         font-family: $Ubuntu;
         padding: 30px 0;
-        //background: $Color-Primary;
         transition: all 0.3s ease;
 
         .max-width {
@@ -40,6 +39,7 @@ header {
 
                         &:hover {
                             color: $Color-Menu;
+                            transition: all 0.3s ease;
                         }
                     }
 
@@ -49,8 +49,43 @@ header {
         }
     }
 
+    // SCROLL NAVBAR STYLING
     .navbar.sticky {
         padding: 15px 0;
         background: $Color-Primary;
+
+        .logo {
+            a {
+                span {
+                    color: #fff;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+
+        .menu {
+            li {
+                a:hover {
+                    color: $Color-Hover;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+
+        .menu-btn:hover {
+            color: $Color-Hover;
+        }
+    }
+
+    // MENU BTN STYLING
+    .menu-btn {
+        color: #fff;
+        font-size: 1.438em;
+        cursor: pointer;
+        display: none;
+
+        &:hover {
+            color: $Color-Menu;
+        }
     }
 }
