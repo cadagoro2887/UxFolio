@@ -40,7 +40,8 @@ section {
 .about,
 .services,
 .skills,
-.teams {
+.teams,
+.contact {
     font-family: $Poppins;
 
     .title {
@@ -80,7 +81,8 @@ section {
 // DISPLAY FLEX STYLING GOBLAL
 .about .about-content,
 .services .serv-content,
-.skills .skills-content {
+.skills .skills-content,
+.contact .contact-content {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -112,4 +114,12 @@ section {
 .owl-dot:hover {
     background: $Color-Menu !important;
 
+}
+
+// CONTACT ME
+.contact .right form .field,
+.contact .right form .fields .field {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 23px;
 }
