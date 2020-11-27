@@ -113,7 +113,7 @@ main {
         }
     }
 
-    // SERVICES SECTION START
+    // SERVICES SECTION STYLING
     .services {
         background: #111;
         color: #fff;
@@ -166,4 +166,107 @@ main {
             }
         }
     }
+
+    // SKILLS SECTION STYLING
+    .skills {
+        .title::after {
+            content: "What I Know";
+        }
+
+        .skills-content {
+            .column {
+                width: calc(50% - 30px);
+            }
+
+            .left {
+                .text {
+                    font-size: 1.5em;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    text-align: justify;
+                }
+
+                a {
+                    display: inline-block;
+                    background: $Color-Menu;
+                    color: #fff;
+                    font-size: 1.125em;
+                    font-weight: 500;
+                    padding: 8px 16px;
+                    margin-top: 20px;
+                    border-radius: 6px;
+                    border: 2px solid $Color-Menu;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        color: $Color-Menu;
+                        background: none;
+                    }
+                }
+            }
+
+            .right {
+                .bars {
+                    margin-bottom: 15px;
+
+                    .info {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 5px;
+
+                        span {
+                            font-weight: 500;
+                            font-size: 1.125em;
+                        }
+                    }
+
+                    .line {
+                        height: 5px;
+                        width: 100%;
+                        background: lightgray;
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            height: 100%;
+                            // width: 80%;
+                            left: 0;
+                            top: 0;
+                            background: $Color-Menu;
+                        }
+                    }
+
+                    .html::before {
+                        width: 90%;
+                    }
+
+                    .css::before {
+                        width: 60%;
+                    }
+
+                    .js::before {
+                        width: 80%;
+                    }
+
+                    .php::before {
+                        width: 50%;
+                    }
+
+                    .mysql::before {
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
 }

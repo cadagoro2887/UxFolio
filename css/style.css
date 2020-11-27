@@ -18,11 +18,13 @@ section {
 }
 
 .about,
-.services {
+.services,
+.skills {
   font-family: "Poppins", san cursive;
 }
 .about .title,
-.services .title {
+.services .title,
+.skills .title {
   position: relative;
   font-family: "Ubuntu", cursive;
   text-align: center;
@@ -32,7 +34,8 @@ section {
   padding-bottom: 20px;
 }
 .about .title::before,
-.services .title::before {
+.services .title::before,
+.skills .title::before {
   content: "";
   position: absolute;
   width: 240px;
@@ -43,7 +46,8 @@ section {
   transform: translateX(-50%);
 }
 .about .title::after,
-.services .title::after {
+.services .title::after,
+.skills .title::after {
   position: absolute;
   bottom: -12px;
   left: 50%;
@@ -56,7 +60,8 @@ section {
 }
 
 .about .about-content,
-.services .serv-content {
+.services .serv-content,
+.skills .skills-content {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -249,8 +254,84 @@ main .services .serv-content .card .box .text {
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
+main .skills .title::after {
+  content: "What I Know";
+}
+main .skills .skills-content .column {
+  width: calc(50% - 30px);
+}
+main .skills .skills-content .left .text {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+main .skills .skills-content .left p {
+  text-align: justify;
+}
+main .skills .skills-content .left a {
+  display: inline-block;
+  background: #F73620;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 500;
+  padding: 8px 16px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid #F73620;
+  transition: all 0.3s ease;
+}
+main .skills .skills-content .left a:hover {
+  color: #F73620;
+  background: none;
+}
+main .skills .skills-content .right .bars {
+  margin-bottom: 15px;
+}
+main .skills .skills-content .right .bars .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+main .skills .skills-content .right .bars .info span {
+  font-weight: 500;
+  font-size: 1.125em;
+}
+main .skills .skills-content .right .bars .line {
+  height: 5px;
+  width: 100%;
+  background: lightgray;
+  position: relative;
+}
+main .skills .skills-content .right .bars .line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #F73620;
+}
+main .skills .skills-content .right .bars .html::before {
+  width: 90%;
+}
+main .skills .skills-content .right .bars .css::before {
+  width: 60%;
+}
+main .skills .skills-content .right .bars .js::before {
+  width: 80%;
+}
+main .skills .skills-content .right .bars .php::before {
+  width: 50%;
+}
+main .skills .skills-content .right .bars .mysql::before {
+  width: 70%;
+}
 
 @media (max-width: 1104px) {
+  .navbar .menu li a:hover {
+    color: #F73620 !important;
+  }
+
   .home .max-width {
     margin-left: 0px !important;
   }
@@ -292,9 +373,6 @@ main .services .serv-content .card .box .text {
     display: inline-block !important;
     margin: 20px 0;
     font-size: 1.563em !important;
-  }
-  .navbar .menu li a:hover {
-    color: #F73620;
   }
   .navbar .menu-btn {
     display: block;
@@ -338,6 +416,11 @@ main .services .serv-content .card .box .text {
   .services .serv-content .card {
     width: 100% !important;
     margin-bottom: 25px;
+  }
+
+  .skills .skills-content .column {
+    width: 100% !important;
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 690px) {

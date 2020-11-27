@@ -36,7 +36,8 @@ section {
 }
 
 .about,
-.services {
+.services,
+.skills {
     font-family: $Poppins;
 
     .title {
@@ -74,7 +75,8 @@ section {
 }
 
 .about .about-content,
-.services .serv-content {
+.services .serv-content,
+.skills .skills-content {
     display: flex;
     align-items: center;
     flex-wrap: wrap;

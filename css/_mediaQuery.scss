@@ -1,6 +1,17 @@
 // RESPONSIVE MEDIA QUERY START
 // ------ MEDIA QUERY 1104PX
 @media (max-width: 1104px) {
+
+    .navbar {
+        .menu {
+            li {
+                a:hover {
+                    color: $Color-Menu !important;
+                }
+            }
+        }
+    }
+
     .home {
         .max-width {
             margin-left: 0px !important;
@@ -57,10 +68,6 @@
                     display: inline-block !important;
                     margin: 20px 0;
                     font-size: 1.563em !important;
-
-                    &:hover {
-                        color: $Color-Menu;
-                    }
                 }
             }
         }
@@ -123,6 +130,15 @@
             .card {
                 width: 100% !important;
                 margin-bottom: 25px;
+            }
+        }
+    }
+
+    .skills {
+        .skills-content {
+            .column {
+                width: 100% !important;
+                margin-bottom: 30px;
             }
         }
     }
