@@ -21,14 +21,16 @@ section {
 .services,
 .skills,
 .teams,
-.contact {
+.contact,
+footer {
   font-family: "Poppins", san cursive;
 }
 .about .title,
 .services .title,
 .skills .title,
 .teams .title,
-.contact .title {
+.contact .title,
+footer .title {
   position: relative;
   font-family: "Ubuntu", cursive;
   text-align: center;
@@ -41,7 +43,8 @@ section {
 .services .title::before,
 .skills .title::before,
 .teams .title::before,
-.contact .title::before {
+.contact .title::before,
+footer .title::before {
   content: "";
   position: absolute;
   width: 240px;
@@ -55,7 +58,8 @@ section {
 .services .title::after,
 .skills .title::after,
 .teams .title::after,
-.contact .title::after {
+.contact .title::after,
+footer .title::after {
   position: absolute;
   bottom: -12px;
   left: 50%;
@@ -65,6 +69,35 @@ section {
   color: #DF2E1C;
   background: #fff;
   transform: translateX(-50%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-up-btn {
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: #F73620;
+  right: 30px;
+  bottom: 30px;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 50%;
+  color: #fff;
+  z-index: 9999;
+  font-size: 1.875em;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show {
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .about .about-content,
@@ -135,6 +168,7 @@ header .navbar .max-width .menu li {
   display: inline-block;
 }
 header .navbar .max-width .menu li a {
+  display: block;
   font-size: 1.125em;
   font-weight: 500;
   margin-left: 25px;
@@ -522,6 +556,20 @@ main .contact .contact-content .right form .button button {
 main .contact .contact-content .right form .button button:hover {
   color: #F73620;
   background: none;
+}
+
+footer {
+  background: #111;
+  padding: 25px 23px;
+  color: #fff;
+  text-align: center;
+}
+footer span a {
+  color: #F73620;
+  text-decoration: none;
+}
+footer span a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 1104px) {

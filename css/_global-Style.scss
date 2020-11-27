@@ -41,7 +41,8 @@ section {
 .services,
 .skills,
 .teams,
-.contact {
+.contact,
+footer {
     font-family: $Poppins;
 
     .title {
@@ -79,6 +80,37 @@ section {
 }
 
 // DISPLAY FLEX STYLING GOBLAL
+
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll-up-btn {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: $Color-Menu;
+    right: 30px;
+    bottom: 30px;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 50%;
+    color: #fff;
+    z-index: 9999;
+    font-size: 1.875em;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+
+}
+
+.scroll-up-btn.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
 .about .about-content,
 .services .serv-content,
 .skills .skills-content,

@@ -8,6 +8,19 @@ $(document).ready(function () {
             $('.navbar').removeClass("sticky");
         }
 
+        if (this.scrollY > 500) {
+            $('.scroll-up-btn').addClass("show");
+        } else {
+            $('.scroll-up-btn').removeClass("show");
+        }
+
+    });
+
+    // SLIDE-UP SCRIPT
+    $('.scroll-up-btn').click(function () {
+        $('html').animate({
+            scrollTop: 0
+        });
     });
 
     // TOGGLE MENU / NAVBAR SCRIPT
@@ -15,6 +28,21 @@ $(document).ready(function () {
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
     });
+
+    // TYPING ANIMATION SCRIPT
+    var typed = new Typed(".typing", {
+        strings: ["YouTube", "Developer", "Freelancer", "Designer", "Ecommerce"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
+    var typed = new Typed(".typing_2", {
+        strings: ["YouTube", "Developer", "Freelancer", "Designer", "Ecommerce"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
+
 
     // OWL CAROUSEL SCRIPT
     $('.carousel').owlCarousel({
