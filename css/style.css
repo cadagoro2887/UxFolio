@@ -19,12 +19,14 @@ section {
 
 .about,
 .services,
-.skills {
+.skills,
+.teams {
   font-family: "Poppins", san cursive;
 }
 .about .title,
 .services .title,
-.skills .title {
+.skills .title,
+.teams .title {
   position: relative;
   font-family: "Ubuntu", cursive;
   text-align: center;
@@ -35,7 +37,8 @@ section {
 }
 .about .title::before,
 .services .title::before,
-.skills .title::before {
+.skills .title::before,
+.teams .title::before {
   content: "";
   position: absolute;
   width: 240px;
@@ -47,7 +50,8 @@ section {
 }
 .about .title::after,
 .services .title::after,
-.skills .title::after {
+.skills .title::after,
+.teams .title::after {
   position: absolute;
   bottom: -12px;
   left: 50%;
@@ -66,6 +70,31 @@ section {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid #DF2E1C !important;
+  transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+  background: #F73620 !important;
 }
 
 header .navbar {
@@ -326,9 +355,57 @@ main .skills .skills-content .right .bars .php::before {
 main .skills .skills-content .right .bars .mysql::before {
   width: 70%;
 }
+main .teams {
+  background: #111;
+  color: #fff;
+}
+main .teams .title::after {
+  content: "Who Job With Me";
+  background: #111;
+  color: #fff;
+}
+main .teams .carousel .card {
+  background: #222;
+  border-radius: 6px;
+  padding: 25px 35px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+main .teams .carousel .card .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+main .teams .carousel .card .box img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #DF2E1C;
+}
+main .teams .carousel .card .box .text {
+  font-size: 1.563em;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+main .teams .carousel .card:hover {
+  background: #F73620;
+}
+main .teams .carousel .card:hover .box {
+  transform: scale(1.05);
+}
+main .teams .carousel .card:hover img {
+  border: 5px solid #fff;
+  transition: color 0.3s ease;
+}
 
 @media (max-width: 1104px) {
   .navbar .menu li a:hover {
+    color: #F73620 !important;
+  }
+  .navbar .menu-btn i:hover {
     color: #F73620 !important;
   }
 

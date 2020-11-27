@@ -10,6 +10,12 @@
                 }
             }
         }
+
+        .menu-btn {
+            i:hover {
+                color: $Color-Menu !important;
+            }
+        }
     }
 
     .home {

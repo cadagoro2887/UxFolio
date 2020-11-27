@@ -31,13 +31,16 @@ $Color-Hover: #000D1C;
     margin: auto;
 }
 
+// SECTION
 section {
     padding: 100px 0;
 }
 
+// TITLE STYLING
 .about,
 .services,
-.skills {
+.skills,
+.teams {
     font-family: $Poppins;
 
     .title {
@@ -74,6 +77,7 @@ section {
     }
 }
 
+// DISPLAY FLEX STYLING GOBLAL
 .about .about-content,
 .services .serv-content,
 .skills .skills-content {
@@ -81,4 +85,31 @@ section {
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+// CAROUSEL STYLING
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot {
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none !important;
+    border-radius: 50%;
+    border: 2px solid $Color-Primary !important;
+    transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+    width: 35px;
+    border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+    background: $Color-Menu !important;
+
 }
